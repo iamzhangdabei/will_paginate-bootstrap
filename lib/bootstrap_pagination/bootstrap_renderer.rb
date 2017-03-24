@@ -14,7 +14,7 @@ module BootstrapPagination
             send(item)
         end
       end.join(@options[:link_separator])
-
+      list_items << "<li><span  style='margin-left:20px;'>共计: #{@collection.total_entries}</span></li>"
       tag("ul", list_items, class: ul_class)
     end
 
